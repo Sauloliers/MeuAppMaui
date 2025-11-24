@@ -9,6 +9,7 @@
 
         private void Button_Clicked(object sender, EventArgs e)
         {
+            // Bloco de tratamento de exceções, para evitar que de erro e o app feche inesperadamente
             try
             {
                 double etanol = Convert.ToDouble(txt_etanol.Text);
@@ -25,6 +26,7 @@
                     msg = "A Gasolina está compensando.";
                 }
 
+                // Exibe o resultado em uma caixa de diálogo
                 DisplayAlert("Calculado", msg, "OK");
             } catch (Exception ex)
             {
